@@ -11,4 +11,4 @@ def safe_print_integer_err(value):
         res = False
         print('Exception: {}'.format(err), file=stderr)
 
-    return 
+    return res
