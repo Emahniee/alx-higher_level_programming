@@ -9,8 +9,7 @@ class Square:
     def __init__(self, size=0):
         '''constructor square'''
         self.__size = size
-        try:
-           type(size) != int or size < 0
-        except (TypeError, ValueError):
-            print("size must be an integer")
-            print("size must be >= 0")
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
