@@ -7,8 +7,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         '''Constructor'''
-        self.width = width
-        self.height = height
+        self.__height = height
+        self.__width = width
 
     @property
     def width(self):
@@ -43,14 +43,22 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.__height * self.__width
+        '''Calculate the area of a rectangle'''
+        return self.__width * self.__height
 
     def perimeter(self):
-        if self.__height == 0 or self.__width == 0:
+        '''Calculate the perimeter of a rectangle'''
+        w, h = self.__width, self.__height
+
+        if w == 0 or h == 0:
             return 0
-        return (self.__height + self.__width) * 2
+
+        return (w * 2) + (h * 2)
+
     def __str__(self):
         '''Rectangle like a string'''
-        if self.__height == 0 or self.__width == 0:
+        w, h = self.__width, self.__height
+        if w == 0 or h == 0:
             return ''
-        return '{}{}'.format(('#' * self.__width + '\n') * (h - 1), '#' * self.__width)
+
+        return '{}{}'.format(('#' * w + '\n') * (h - 1), '#' * w)
