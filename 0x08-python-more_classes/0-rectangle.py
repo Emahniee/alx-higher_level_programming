@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-'''Class Rectangle'''
+'''Class rectangle'''
 
 
-class rectangle:
+class Rectangle:
 
     '''form'''
 
