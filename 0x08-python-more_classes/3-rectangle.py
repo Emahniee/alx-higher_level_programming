@@ -50,6 +50,7 @@ class Rectangle:
             return 0
         return (self.__height + self.__width) * 2
     def __str__(self):
-        print(str(#))
+        '''Rectangle like a string'''
         if self.__height == 0 or self.__width == 0:
-            return str()
+            return ''
+        return '{}{}'.format(('#' * self.__width + '\n') * (h - 1), '#' * self.__width)
