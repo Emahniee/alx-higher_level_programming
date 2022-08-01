@@ -1,9 +1,10 @@
-#!/urs/bin/python3
-'''Module for task 6'''
+#!/usr/bin/python3
+'''Module class BaseGeometry'''
 
 
-class BaseGeometry():
+class BaseGeometry:
     '''Class BaseGeometry'''
+
     def area(self):
-        '''Method not Implemented'''
-        raise Exception("area() is not implemented")
+        '''Method not implemented'''
+        raise Exception('area() is not implemented')
