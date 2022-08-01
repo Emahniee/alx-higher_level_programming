@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-
-''' Module for task 1'''
+'''Module for task 1'''
 
 
 class MyList(list):
     '''Subclass of list'''
 
-
     def print_sorted(self):
-        '''prints list in sorted ascending order'''
+        '''Print a list in sorted ascending'''
         print(sorted(self))
