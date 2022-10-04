@@ -2,10 +2,11 @@
 
 class Rectangle {
 	width;
-	height;
+	height; 
 
 	constructor (w, h) {
 		self.width = w;
 		self.height = h;
 	}
 }
+module.exports = Rectangle;
