@@ -1,19 +1,13 @@
 #!/usr/bin/python3
-""" Fetches https://intranet.hbtn.io/status"""
-import requests
-from requests.auth import HTTPBasicAuth
-from sys import argv
+"""
+Script to display Github id using OAuth
+"""
 
+import requests as req
+import sys
 
-if __name__ == '__main__':
-    url = 'https://api.github.com/user'
-    username, token = argv[1:]
-
-    s = requests.Session()
-
-    data = {'username': username, 'token': token}
-    response = s.get(url, auth=(username, token)).json()
-    try:
-        print(response['id'])
-    except:
-        print('None')
+if __name__ == "__main__":
+    response = req.get('https://api.github.com/user', auth=(
+             sys.argv[1], sys.argv[2]))
+    res = response.json()
+    print(res.get("id"))
